@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <title>about us</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: #f7f7ff;
+            color: #333;
+        }
+
+        /* Header Title */
+        header {
+            font-size: 28px;
+            font-weight: 700;
+            padding: 20px;
+            text-align: center;
+            background: #6a0dad;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        /* Navbar Toggle Button */
+        #menu-toggle {
+            display: none;
+        }
+
+        .toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            height: 38px;
+            width: 38px;
+            cursor: pointer;
+            z-index: 1000;
+            background: #6a0dad;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: background 0.3s;
+        }
+
+        .toggle:hover {
+            background: #540a9e;
+        }
+
+        .toggle span {
+            position: absolute;
+            height: 3px;
+            width: 22px;
+            background: white;
+            border-radius: 5px;
+            transition: 0.4s ease;
+        }
+
+        .toggle .line1 { transform: translateY(-7px); }
+        .toggle .line2 { transform: translateY(0); }
+        .toggle .line3 { transform: translateY(7px); }
+
+        /* X animation */
+        #menu-toggle:checked + .toggle .line1 {
+            transform: rotate(45deg);
+        }
+        #menu-toggle:checked + .toggle .line2 {
+            opacity: 0;
+        }
+        #menu-toggle:checked + .toggle .line3 {
+            transform: rotate(-45deg);
+        }
+
+        /* Right Slide Menu */
+        .slide {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background: #6a0dad;
+            padding-top: 90px;
+            box-shadow: -4px 0 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s ease;
+            z-index: 999;
+        }
+
+        #menu-toggle:checked ~ .slide {
+            right: 0;
+        }
+
+        .slide ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .slide ul li {
+            margin-bottom: 8px;
+        }
+
+        .slide ul li a {
+            display: block;
+            padding: 14px 25px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: background 0.3s;
+        }
+
+        .slide ul li a:hover {
+            background: #540a9e;
+        }
+
+        .slide ul li a i {
+            margin-right: 12px;
+        }
+
+        /* Page Content */
+        .content {
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 26px;
+            color: #6a0dad;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #444;
+            font-weight: 400;
+        }
+        footer{
+            background-color: #6a0dad;
+            color:#f7f7ff;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding-bottom: 10px;
+            
+        }
+        .image-row{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            gap:20px;
+            border-bottom:black ;
+        }
+        .image-row img{
+            width:300px;
+            border-radius: 10px;
+            object-fit: cover;/*crop nicely without streching*/
+            height: 200px;/*same height*/
+        }
+    </style>
+</head>
+
+<body>
+
+<header>Adventure</header>
+
+<!-- Toggle Button -->
+<input type="checkbox" id="menu-toggle">
+<label for="menu-toggle" class="toggle">
+    <span class="line1"></span>
+    <span class="line2"></span>
+    <span class="line3"></span>
+</label>
+
+<!-- Slide Menu -->
+<div class="slide">
+    <ul>
+        <li><a href="#"> Home</a></li>
+        <li><a href="travel destination.html"> Our Destinations</a></li>
+        <li><a href="#"> Contact Us</a></li>
+        <li><a href="#"> About Us</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#"> Accomodation</a></li>
+        <li ><a href="#">Food</a></li>
+    </ul>
+</div>
+
+<!-- Page Content -->
+<div class="content">
+    <h2>OUR SERVICES</h2>
+    <p>
+        At Wonderlust Tours, we offer a wide range of travel services designed to meet your every need.
+        From flight and hotel bookings to complete tour packages, our goal is to make your journey smooth and enjoyable.
+        Whether you're planning a family holiday, romantic getaway, or corporate trip,
+        our team is ready to assist you with expert guidance and reliable support.
+    </p>
+</div>
+<div class="image-row">
+    <img src="torism pics/chris-czermak-7ybKmhDTcz0-unsplash.jpg">
+     <img src="torism pics/hasmik-ghazaryan-olson-z5ivBl5Dd1s-unsplash.jpg">
+      <img src="torism pics/joshua-rondeau-EIeVusiphj4-unsplash.jpg">
+       <img src="torism pics/neom-efzvMAIpfWY-unsplash.jpg">
+        <img src="torism pics/neom-kXbit_yx8t4-unsplash.jpg">
+         <img src="torism pics/oliver-sjostrom-gofDws5Y_CU-unsplash.jpg">
+</div>
+
+</body>
+<footer>
+    <h2 style="color:black; font-size: 50px;">wanderlust tours</h2>
+    <h3>travel beyond your borders</h3>
+    <h2 style="color: black;">quick links</h2>
+    <p style="color: #070707;">@ wanderlust tours 2025 all rights are reserved</p>
+    <p style="color: #000000;">Emali:wanerlusttours @gmail.com</p>
+</footer>
+</html>
